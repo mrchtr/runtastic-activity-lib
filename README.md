@@ -1,4 +1,4 @@
-#Runtastic-Activity-Parser
+# Runtastic-Activity-Parser
 
 A simple parser to convert activities from runtastic to a basic GPX format.
 
