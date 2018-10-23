@@ -13,20 +13,25 @@ import java.util.stream.Stream;
 public class Parser {
 
     //source path where all jsons are stores
-    public static String SOURCE_FOLDER = "./";
-    public static String TARGET_FOLDER = "";
+    private static String SOURCE_FOLDER = "./";
+    private static String TARGET_FOLDER = "";
 
-    public static boolean ERROR = false;
+    private static boolean ERROR = false;
 
     public static void main(String[] args) {
         if(args.length == 0){
             System.out.println("Specificate the source path of the directory with the activity json files."
             + System.lineSeparator() + "Example:"
-            + System.lineSeparator() + "java -jar runtasticactivityparser /Users/bob/data/runtastic");
+            + System.lineSeparator() + "java -jar runtasticactivityparser /Users/bob/data/runtastic /Users/bob/outdir");
             System.exit(0);
         } else {
             SOURCE_FOLDER = args[0];
-            TARGET_FOLDER = SOURCE_FOLDER + "/target";
+            if(args.length == 1){
+                TARGET_FOLDER = SOURCE_FOLDER + "/target";
+            } else {
+                TARGET_FOLDER = args[1];
+            }
+
         }
 
         File sourceFolder = new File(SOURCE_FOLDER);
