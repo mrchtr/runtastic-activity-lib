@@ -56,8 +56,8 @@ public class Parser {
     }
 
     public static void parseJsonToGPX(File json){
-        final String LAT_PATTERN = "\"latitude\":([0-9]+.[0-9]+)";
-        final String LON_PATTERN = "\"longitude\":([0-9]+.[0-9]+)";
+        final String LAT_PATTERN = "\"latitude\":(-?[0-9]+.[0-9]+)";
+        final String LON_PATTERN = "\"longitude\":(-?[0-9]+.[0-9]+)";
         final String ELE_PATTERN = "\"altitude\":([0-9]+.[0-9]+)";
         final String TIME_PATTERN = "\"timestamp\":\"(.+\\+[0-9]+)\"";
         String gpx  = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
