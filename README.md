@@ -19,6 +19,6 @@ a folder 'Sport-sessions'. This folder includes all your activities in seperated
 
 ## Parse JSON Files to GPX
 To parse the activity JSON files to GPX files run the build jar like following: \
-``` java -jar runtastic-activity-parser /User/bob/Sport-sessions /User/bob/output ``` \
+``` java -jar runtastic-activity-parser /User/bob/Sport-sessions/GPS-data /User/bob/output ``` \
 The first argument is the source path and the second the target path.
    
